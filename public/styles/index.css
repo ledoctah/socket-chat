@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300;1,400;1,900&display=swap');
+@import url('./header.css');
+@import url('./card.css');
+@import url('./chat.css');
+@import url('./input.css');
+
+/*GLOBAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    font-family: "Roboto", sans-serif;
+}
+
+html,body {
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div.container {
+    width: 90%;
+    max-width: 1920px;
+    margin: auto;
+}
