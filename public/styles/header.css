@@ -1,0 +1,15 @@
+header {
+    width: 100%;
+    padding: 8px;
+    background-color: #2c76ff;
+    border-bottom: 1px solid rgba(209, 209, 209, 0.692);
+    text-align: center;
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+header div.logo {
+    user-select: none;
+}
