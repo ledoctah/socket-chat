@@ -24,3 +24,19 @@ div.card.initial > form > .button-container {
     display: flex;
     justify-content: flex-end;
 }
+
+div.card.rooms {
+    width: 40%;
+    min-width: 700px;
+}
+
+form.create-room {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    gap: 20px;
+}
+
+form.create-room * {
+    font-size: 12px;
+}

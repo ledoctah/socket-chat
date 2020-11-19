@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.use(session);
 app.use((req, res, next) => {
     res.locals.session = req.session;
-
+    
     if(!req.session.user && req.url != '/name') {
         return res.render('initial/index.njk');
     }
