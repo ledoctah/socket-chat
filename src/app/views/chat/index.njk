@@ -1,5 +1,10 @@
 {% extends "layout.njk" %}
 
+{% block head %}
+    <script src="/scripts/socket.io.js"></script>
+    <script src="/scripts/chat.js"></script>
+{% endblock head %}
+
 {% block content %}
     <div class="card">
         <div class="chat">
@@ -7,70 +12,24 @@
             <div class="left-column">
                 <div class="messages">
 
-                    <div class="message received">
-                        <div class="name">Anderson</div>
-                        <div class="message">Olá!</div>
-                        <div class="time">21:13</div>
-                    </div>
-
-                    <div class="message sent">
-                        <div class="name">Você</div>
-                        <div class="message">Oi, tudo bem?</div>
-                        <div class="time">21:13</div>
-                    </div>
-
-                    <div class="message received">
-                        <div class="name">Anderson</div>
-                        <div class="message">Tudo bem e você?</div>
-                        <div class="time">21:14</div>
-                    </div>
-
-                    <div class="message sent">
-                        <div class="name">Você</div>
-                        <div class="message">Tudo bem também! :)</div>
-                        <div class="time">21:18</div>
-                    </div>
-                    
-                    <div class="message received">
-                        <div class="name">Anderson</div>
-                        <div class="message">Olá!</div>
-                        <div class="time">21:13</div>
-                    </div>
-
-                    <div class="message sent">
-                        <div class="name">Você</div>
-                        <div class="message">Oi, tudo bem?</div>
-                        <div class="time">21:13</div>
-                    </div>
-
-                    <div class="message received">
-                        <div class="name">Anderson</div>
-                        <div class="message">Tudo bem e você?</div>
-                        <div class="time">21:14</div>
-                    </div>
-
-                    <div class="message sent">
-                        <div class="name">Você</div>
-                        <div class="message">Tudo bem também! :)</div>
-                        <div class="time">21:18</div>
-                    </div>
-
                 </div>
                 
                 <div class="send-message">
-                    <input type="text" name="message">
+                    <input type="text" name="message" placeholder="Digite sua mensagem...">
                     <button type="submit">Enviar</button>
                 </div>
             </div>
 
             <div class="right-column">
                 <div class="connected-users">
-                    <div class="user">Anderson</div>
+                    <!--<div class="user">Anderson</div>
                     <div class="user">Julian</div>
-                    <div class="user">Matheus (Você)</div>
+                    <div class="user">Matheus (você)</div>-->
                 </div>
             </div>
 
         </div>
     </div>
+
+    <script src="/scripts/socket.js"></script>
 {% endblock content %}

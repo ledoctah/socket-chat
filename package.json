@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/ledoctah/socket-chat#readme",
   "dependencies": {
+    "connect-sqlite3": "^0.9.11",
     "express": "^4.17.1",
     "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
     "nunjucks": "^3.2.2",
     "socket.io-client": "^3.0.1",
     "socketio": "^1.0.0"
