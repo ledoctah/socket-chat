@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+{% endblock head %}
+
+{% block content %}
+    <div class="card rooms">
+        {% if rooms | length %}
+        <h3>Salas disponíveis</h3>
+
+        <table class="rooms">
+            <thead>
+                <tr>
+                    <th>Nome da sala</th>
+                    <th>Conectados</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for room in rooms %}
+                <tr>
+                    <td>{{room.name}}</td>
+                    <td>{{room.connectedUsers | length}}</td>
+                    <td>
+                        <a href="/rooms/{{room.hash}}">Entrar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div> Nenhuma sala disponível </div>
+        {% endif %}
+
+        <form action="/rooms" method="POST" class="create-room">
+            <input type="text" name="name" placeholder="Nome da sala que deseja criar" required>
+            <button type="submit">Criar sala</button>
+        </form>
+    </div>
+{% endblock content %}
