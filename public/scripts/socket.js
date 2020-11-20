@@ -24,3 +24,11 @@ socket.on('newConnection', user => {
 socket.on('disconnection', user => {
     removeUser(user);
 });
+
+const emitMessage = (message) => {
+    socket.emit('sendMessage', message);
+}
+
+socket.on('newMessage', (message) => {
+    renderMessage({ type: 'received', name: message.name, message: message.text });
+})

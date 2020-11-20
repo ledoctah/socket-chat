@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('./header.css');
 @import url('./card.css');
 @import url('./chat.css');
@@ -29,4 +30,9 @@ div.container {
     width: 90%;
     max-width: 1920px;
     margin: auto;
+}
+
+*.hidden {
+    visibility: hidden;
+    opacity: 0;
 }

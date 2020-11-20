@@ -10,22 +10,18 @@
         <div class="chat">
 
             <div class="left-column">
-                <div class="messages">
-
-                </div>
+                <div class="messages"></div>
                 
                 <div class="send-message">
-                    <input type="text" name="message" placeholder="Digite sua mensagem...">
-                    <button type="submit">Enviar</button>
+                    <form onsubmit="sendMessage(event)">
+                        <input type="text" name="message" placeholder="Digite sua mensagem...">
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
             </div>
 
             <div class="right-column">
-                <div class="connected-users">
-                    <!--<div class="user">Anderson</div>
-                    <div class="user">Julian</div>
-                    <div class="user">Matheus (você)</div>-->
-                </div>
+                <div class="connected-users"></div>
             </div>
 
         </div>

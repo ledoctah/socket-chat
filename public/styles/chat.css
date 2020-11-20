@@ -20,6 +20,8 @@ div.chat div.right-column {
 }
 
 div.chat .messages {
+    position: relative;
+
     max-height: 60vh;
     overflow-y: scroll;
 }
@@ -48,6 +50,37 @@ div.message {
     padding: 14px 8px;
     border-radius: 4px;
     font-size: 18px;
+}
+
+@keyframes blink {
+    0% {
+      background-color: rgb(119, 156, 255);
+    }
+    50% {
+        background-color: rgb(79, 126, 255);
+    }
+    100% {
+        background-color: rgb(13, 98, 255);
+    }
+}
+
+span.material-icons.message-warning {
+    font-size: 39px;
+    color: #fff;
+    padding: 4px 4px;
+    border-radius: 50%;
+    background-color: rgb(13, 98, 255);
+    box-shadow: 6px 7px 73px -18px rgba(0,0,0,0.64);
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    cursor: pointer;
+}
+
+span.material-icons.message-warning.blink {
+    animation: blink 0.7s 10;
 }
 
 div.message.received {
@@ -79,7 +112,7 @@ div.message .time {
     bottom: 2px;
 }
 
-div.send-message {
+div.send-message form {
     display: grid;
     grid-template-columns: 1fr 150px;
     gap: 10px;
@@ -90,19 +123,19 @@ div.send-message {
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+/* Track */
+::-webkit-scrollbar-track {
     background: #f1f1f1;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background:  rgb(115, 164, 255);
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #2c76ff;
-  }
+}
