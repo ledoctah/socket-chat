@@ -36,6 +36,6 @@ nunjucks.configure('src/app/views', {
 const Socket = require('./app/models/Socket');
 Socket.configure(socket);
 
-server.listen((process.env.PORT || 5000), function() {
+server.listen((process.env.PORT || 80), function() {
     console.log(`Server is running`);
 })
