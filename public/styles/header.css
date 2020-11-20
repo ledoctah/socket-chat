@@ -10,6 +10,8 @@ header {
     letter-spacing: 1px;
 }
 
-header div.logo {
+header div.logo,
+header a {
+    color: #fff;
     user-select: none;
 }
