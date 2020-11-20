@@ -1,6 +1,6 @@
 let me = undefined;
 
-const socket = io.connect('https://ledoctah-chat.herokuapp.com/');
+const socket = io.connect(location.origin);
 
 const pathname_split = location.pathname.split('/');
 const hash = pathname_split[pathname_split.length-1];
@@ -19,10 +19,14 @@ socket.on('connected', object => {
 
 socket.on('newConnection', user => {
     renderUser(user);
+
+    renderWarning(`${user.name} entrou`);
 });
 
 socket.on('disconnection', user => {
     removeUser(user);
+
+    renderWarning(`${user.name} saiu`);
 });
 
 const emitMessage = (message) => {

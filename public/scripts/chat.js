@@ -80,3 +80,18 @@ const sendMessage = (event) => {
         emitMessage(message);
     }
 }
+
+const renderWarning = (warning) => {
+    let div = document.querySelector('div.warning');
+
+    if(!div) {
+        div = document.createElement('div');
+        div.classList.add('warning');
+    }
+
+    div.remove();
+
+    div.innerText = warning;
+
+    document.body.appendChild(div);
+}
