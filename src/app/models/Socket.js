@@ -47,6 +47,17 @@ module.exports = {
                 }
             });
 
+            client.on('sendMessage', (message) => {
+                if(roomHash) {
+                    message = {
+                        name: user.name,
+                        text: message
+                    };
+
+                    client.broadcast.to(roomHash).emit('newMessage', message);
+                }
+            })
+
         });
     }
 }

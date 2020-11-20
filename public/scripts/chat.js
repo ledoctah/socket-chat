@@ -13,7 +13,7 @@ const renderMessage = ({ type, name, message }) => {
 
     nameDiv.innerText = name;
     messageDiv.innerText = message;
-    timeDiv.innerText = `${new Date().getHours()}:${new Date().getMinutes()}`;
+    timeDiv.innerText = `${('0'+new Date().getHours()).slice(-2)}:${('0'+new Date().getMinutes()).slice(-2)}`;
 
     messageContainerDiv.appendChild(nameDiv);
     messageContainerDiv.appendChild(messageDiv);
@@ -60,8 +60,23 @@ const removeUser = (user) => {
         const users = connected.querySelectorAll('div.user');
 
         const divs = Array.from(users).filter(item => item.dataset.hash == user.hash);
-        console.log(divs);
         
         for(div of divs) connected.removeChild(div);
+    }
+}
+
+const sendMessage = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    
+    const input = form.querySelector('input');
+    
+    const message = input.value;
+    input.value = "";
+
+    if(message) {
+        renderMessage({ type: 'sent', name: 'Você', message: message });
+        emitMessage(message);
     }
 }
