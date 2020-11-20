@@ -37,3 +37,10 @@ div.container {
     visibility: hidden;
     opacity: 0;
 }
+
+@media(max-width: 800px) {
+    div.container {
+        width: 100%;
+        margin: auto 0px;
+    }
+}
