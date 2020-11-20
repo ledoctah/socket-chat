@@ -7,7 +7,7 @@
     "start": "node src/index.js",
     "dev": "npm-run-all -p nodemon browsersync",
     "nodemon": "nodemon src/index.js",
-    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, views'"
+    "browsersync": "browser-sync start --proxy http://localhost:80 --files 'public, views'"
   },
   "repository": {
     "type": "git",

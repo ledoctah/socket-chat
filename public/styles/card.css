@@ -40,3 +40,19 @@ form.create-room {
 form.create-room * {
     font-size: 12px;
 }
+
+@media(max-width: 800px) {
+    div.card {
+        padding: 32px 24px;
+        margin: 32px auto;
+
+        border: none;
+        box-shadow: none;
+        border-radius: 4px;
+    }
+
+    div.card.rooms {
+        width: 100%;
+        min-width: initial;
+    }
+}

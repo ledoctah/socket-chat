@@ -1,0 +1,18 @@
+@keyframes hidemessage {
+    to {
+        opacity: 0;
+    }
+}
+
+div.warning {
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    padding: 8px;
+    background-color: rgb(41, 41, 41);
+    border-radius: 8px 0px 0px 8px;
+    font-weight: bold;
+    color: white;
+
+    animation: hidemessage 0.5s 5s ease-out forwards;
+}

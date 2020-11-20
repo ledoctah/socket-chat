@@ -139,3 +139,30 @@ div.send-message form {
 ::-webkit-scrollbar-thumb:hover {
     background: #2c76ff;
 }
+
+@media(max-width: 700px) {
+    div.send-message form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 16px;
+        border-top: 1px solid rgba(119, 119, 119, 0.246);
+    }
+
+    div.chat div.left-column {
+        grid-template-rows: 1fr 110px;
+    }
+}
+
+@media(max-width: 425px) {
+    div.chat div.left-column {
+        flex-basis: 100%;
+    }
+
+    div.chat div.right-column {
+        flex-basis: 0%;
+        width: 0px;
+        visibility: hidden;
+        display: none;
+    }
+}
