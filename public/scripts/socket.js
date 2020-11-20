@@ -1,6 +1,6 @@
 let me = undefined;
 
-const socket = io.connect('http://localhost:5000');
+const socket = io.connect('https://ledoctah-chat.herokuapp.com/');
 
 const pathname_split = location.pathname.split('/');
 const hash = pathname_split[pathname_split.length-1];
