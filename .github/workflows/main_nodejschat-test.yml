@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'nodejschat-test'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e8259740b1c940f889fca9fdbd970b69 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1016374e956e430a8b7b7c170616e631 }}
         package: .
